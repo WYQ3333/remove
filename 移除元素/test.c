@@ -32,13 +32,13 @@ int removeElement(int* nums, int numsSize, int val) {
 	}
 	while (k<numsSize)
 	{
-		while (nums[i] != val)
+		while (i<numsSize&&nums[i] != val)
 		{
 			i++;
 			count++;
 		}
 		j = i;
-		while (nums[j] == val)
+		while (j<numsSize&&nums[j] == val)
 		{
 			j++;
 		}
@@ -58,9 +58,9 @@ int removeElement(int* nums, int numsSize, int val) {
 
 int main()
 {
-	int nums[] = { 0, 1, 2, 2, 3, 0, 4, 2 };
+	int nums[] = { 3,3 };
 	int numsSize = sizeof(nums) / sizeof(nums[0]);
-	int val = 2;
+	int val = 5;
 	for (int i = 0; i < numsSize; i++)
 	{
 		printf("%d ", nums[i]);
