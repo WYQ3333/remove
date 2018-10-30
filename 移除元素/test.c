@@ -74,3 +74,5 @@ int main()
 	system("pause");
 	return 0;
 }
+//解题思路：
+//定义 nums[0...i] 为非 val 的数列，遍历整个数列不断的维护这个定义
